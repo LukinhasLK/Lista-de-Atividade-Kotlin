@@ -114,6 +114,17 @@ fun main() {
 
     println(saudacao("Lukinhas","São paulo"))
 
+    //Exercício 8   ·   funções
+    //Usando a função abaixo, escreva três chamadas: uma que aproveite os dois valores padrão, uma que mude apenas o período sem repetir o curso, e uma que passe os argumentos fora da ordem da declaração.
+    //fun matricular(nome: String, curso: String = "ADS", periodo: Int = 1) {
+    //    println("$nome — $curso — ${periodo}º período")
+    //}
+    //Entregue: as três chamadas e a saída de cada uma.
+
+    matricula("lucas","ADS",2)
+    println(matricula("lucas","ADS",2))
+
+
     // Exercício 9   ·   lambdas
     //Declare uma lambda com o tipo explícito que receba um String e devolva o texto em maiúsculas. Em seguida, use filter e map na lista para ficar só com os nomes de mais de quatro letras, em maiúsculas. Escreva a versão com o parâmetro nomeado e a versão com it.
     //fun main() {
@@ -171,6 +182,8 @@ fun saudacao(nome: String?,prefixo:String?): String ="$nome,$prefixo"
 // exercicio 6
 data class Endereco(val cidade: String?)
 data class Aluno(val nome: String, val endereco: Endereco?)
+
+fun matricula (nome:String , curso:String = "ADS",periodo:Int) =  "$nome , $curso , $periodo"
 
 // exercicio 10
 fun botao(rotulo: String, acao: () -> Unit) {
